@@ -4,6 +4,9 @@ provider "aws" {
 
 resource "aws_s3_bucket" "s3_bucket" {
   bucket = var.bucket_name
+  tags = {
+    yor_trace = "3a792f38-69ae-4119-8f53-daef188ecc6a"
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "s3_bucket" {
